@@ -332,11 +332,11 @@ a:hover { color: white; }
 	margin: 0 7px 7px 0;
 }
 
-#thumbnail {
+/*#thumbnail {
 	width: 60%;
 	margin: -3px 20% 0;
 	display: block;
-}
+}*/
 
 @media screen and (max-width:480px) {
 	#primary .review_article img {
@@ -345,10 +345,10 @@ a:hover { color: white; }
 		margin-bottom: 15px;
 	}
 
-	#thumbnail {
+/*	#thumbnail {
 		width: 80%;
 		margin: -3px 10% 0;
-	}
+	} */
 }
 
 /*	Menu Entries */

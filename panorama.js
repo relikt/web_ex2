@@ -83,6 +83,9 @@ $(function() {
 
 	//KeyboardEvents
 	$(document).keydown(function(e){
+		if (isMouseDown) {
+			return;
+		}
 		var dx = 0;
 		//Left Arrow
 		if (e.keyCode == 37) { 
@@ -90,6 +93,8 @@ $(function() {
 		//Right Arrow
 		} else if (e.keyCode == 39) { 
 			dx = -15; walking=false;
+		} else {
+			return;
 		}
 		var maxLeft = $thumb.width() - $drag.width() - 3;
 		var actualX = parseInt($drag.css('left'));

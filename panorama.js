@@ -9,7 +9,7 @@ $(function() {
 
 
 	//Init draggable Div
-	var $drag = $('<div id="panorama-draggable" style="position: absolute; top:0; border:2px solid black; background:transparent; cursor:pointer; border-radius:10px; "></div>');
+	var $drag = $('<div id="panorama-draggable" style="position: absolute; left:0; top:0; border:2px solid black; background:transparent; cursor:pointer; border-radius:10px; "></div>');
 
 	$drag.appendTo($thumb);	
 

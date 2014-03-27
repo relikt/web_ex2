@@ -52,7 +52,7 @@
             });
             placeholder.append(nav);
 
-            indicator = $("<div class=\"panorama-indicator\ draggable\">");
+            indicator = $("<div class=\"panorama-indicator draggable\">");
             nav.append(indicator);
 
             placeholder.addClass("panorama-container");

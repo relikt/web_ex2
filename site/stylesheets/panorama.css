@@ -28,9 +28,10 @@
   margin: 0 auto !important;
   position: relative;
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
-/* line 29 */
+/* line 30 */
 .panorama-indicator {
   border: 1px solid black;
   position: absolute;

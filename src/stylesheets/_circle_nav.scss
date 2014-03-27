@@ -1,0 +1,54 @@
+// had some spare time to do this ^^
+@import "mixins";
+
+nav.circle {
+  position: relative;
+
+  ul > li {
+    @include transform-origin(100% 50%);
+    width: 40px;
+    height: 80px;
+    position: absolute;
+    overflow: hidden;
+    pointer-events: none;        
+  }
+
+  ul > li.top {
+    @include rotate(45deg);
+    top: -2px;
+  }
+
+  ul > li.right {
+    @include rotate(135deg);
+    left: 2px;
+  }
+
+  ul > li.bottom {
+    @include rotate(225deg);
+    top: 2px;
+  }
+
+  ul > li.left {
+    @include rotate(315deg);
+    left: -2px;
+  }
+
+  ul > li > a {
+    display: block;
+    border-radius: 40px 0 0 40px;
+    width: 40px;
+    height: 80px;
+    background: #fff;
+    opacity: 0.75;
+    cursor: pointer;
+
+    @include transform-origin(100% 50%);
+    @include rotate(90deg);
+
+    pointer-events: auto;  
+
+    &:hover {
+      background: orange;
+    }  
+  }
+}

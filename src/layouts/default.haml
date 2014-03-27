@@ -1,0 +1,57 @@
+!!!5
+%html
+  %head
+    %meta{charset: 'UTF-8'}
+    %title Evaluate Thy Hotel
+    
+    = stylesheets :normalize, :panorama, :application, :media => :screen
+    %meta{:content => "initial-scale=1.0, width=device-width, maximum-scale=3, minimum-scale=0.5", :name => "viewport"}
+  %body.container
+    %header#header-website
+      %h1
+        Evaluate Thy Hotel
+
+      %nav#nav-top{role: 'navigation'}
+        %a{href: 'index.html', class: (current_page == '/index.html' ? 'active' : '')} Home
+        %a{href: 'panoramic.html', class: (current_page == '/panoramic.html' ? 'active' : '')} Weekly Location
+        %a{href: 'reviewers.html', class: (current_page == '/reviewers.html' ? 'active' : '')} Reviewers
+
+    .clearfix
+      #sidebar-left
+        %nav#nav-sidebar{role: 'navigation'}
+          %header Menu
+          %ul
+            %li
+              %a{href: '#'} Reviewed Hotels
+            %li
+              %a{href: '#'} Get Reviewed
+            %li
+              %a{href: '#'} Guidelines
+            %li
+              %a{href: '#'} User Feedback
+            %li
+              %a{href: '#'} Contact Us
+
+      %main#main-website
+        .inner
+          = yield
+
+      #sidebar-right
+        = partial (current_page == '/index.html') ? 'sidebar_reviewers' : 'sidebar_reviews'
+        = partial 'sidebar_contest'
+        = partial 'sidebar_social'
+          
+
+    %footer#footer-website
+      %nav#nav-footer
+        %ul
+          %li
+            %a{href: '#'} Disclaimer
+          %li
+            %a{href: '#'} Contact
+          %li
+            %a{href: '#'} Help
+      %p.copyright
+        &copy Copyright 2014. All rights reserved
+
+    = javascripts 'jquery', 'jquery.panorama', 'evaluate_thy_hotel'

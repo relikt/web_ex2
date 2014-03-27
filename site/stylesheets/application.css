@@ -1,0 +1,802 @@
+/* line 3, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_mixins.scss */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+/* line 7, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_mixins.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 5, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_layout.scss */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  /* line 5, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_layout.scss */
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 5, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_layout.scss */
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 5, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_layout.scss */
+  .container {
+    width: 1170px;
+  }
+}
+/* line 3, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_mixins.scss */
+.container:before, .container:after {
+  content: " ";
+  display: table;
+}
+/* line 7, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_mixins.scss */
+.container:after {
+  clear: both;
+}
+
+/* line 22, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_layout.scss */
+#header-website {
+  margin: 0px 15px;
+}
+
+/* line 26, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_layout.scss */
+#footer-website {
+  margin: 15px;
+}
+
+/* line 32, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_layout.scss */
+#sidebar-left,
+#sidebar-right,
+#main-website {
+  float: left;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* line 42, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_layout.scss */
+#sidebar-left {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  /* line 42, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_layout.scss */
+  #sidebar-left {
+    width: 20%;
+  }
+}
+
+/* line 49, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_layout.scss */
+#sidebar-right {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  /* line 49, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_layout.scss */
+  #sidebar-right {
+    width: 25%;
+  }
+}
+
+/* line 56, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_layout.scss */
+#main-website {
+  width: 100%;
+  margin-bottom: 15px;
+}
+@media (min-width: 992px) {
+  /* line 56, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_layout.scss */
+  #main-website {
+    width: 55%;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 66, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_layout.scss */
+  #footer-website {
+    padding-left: 20%;
+  }
+}
+
+/* line 72, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_layout.scss */
+#main-website > .inner {
+  overflow: hidden;
+  padding: 0px 15px;
+  border-radius: 10px;
+  background-color: #ffc45e;
+}
+
+/* line 80, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_layout.scss */
+#main-website > .inner > article,
+#main-website > .inner > a.previous {
+  display: block;
+  padding: 15px;
+  margin: 15px 0px;
+  border-radius: 10px;
+  background-color: #efefef;
+}
+
+/* line 88, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_layout.scss */
+#main-website > .inner > a.previous {
+  font-weight: bold;
+  text-align: center;
+}
+/* line 91, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_layout.scss */
+#main-website > .inner > a.previous:hover {
+  text-decoration: none;
+  background: #e2e2e2;
+}
+
+/* line 98, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_layout.scss */
+#sidebar-right,
+#sidebar-left {
+  overflow: hidden;
+  margin-top: -15px;
+}
+
+/* line 104, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_layout.scss */
+#sidebar-right > aside,
+#sidebar-left > nav {
+  padding: 15px;
+  margin: 15px 0px;
+  border-radius: 10px;
+  background-color: #ffc45e;
+}
+
+/* line 4, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_circle_nav.scss */
+nav.circle {
+  position: relative;
+}
+/* line 7, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_circle_nav.scss */
+nav.circle ul > li {
+  -webkit-transform-origin: 100% 50%;
+  -moz-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  width: 40px;
+  height: 80px;
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+}
+/* line 16, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_circle_nav.scss */
+nav.circle ul > li.top {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -2px;
+}
+/* line 21, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_circle_nav.scss */
+nav.circle ul > li.right {
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+  left: 2px;
+}
+/* line 26, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_circle_nav.scss */
+nav.circle ul > li.bottom {
+  -webkit-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+  top: 2px;
+}
+/* line 31, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_circle_nav.scss */
+nav.circle ul > li.left {
+  -webkit-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  -o-transform: rotate(315deg);
+  transform: rotate(315deg);
+  left: -2px;
+}
+/* line 36, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_circle_nav.scss */
+nav.circle ul > li > a {
+  display: block;
+  border-radius: 40px 0 0 40px;
+  width: 40px;
+  height: 80px;
+  background: #fff;
+  opacity: 0.75;
+  cursor: pointer;
+  -webkit-transform-origin: 100% 50%;
+  -moz-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  pointer-events: auto;
+}
+/* line 50, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_circle_nav.scss */
+nav.circle ul > li > a:hover {
+  background: orange;
+}
+
+@-webkit-keyframes moveRight {
+  /* line 4, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_animations.scss */
+  100% {
+    left: -3000px;
+  }
+}
+
+@-moz-keyframes moveRight {
+  /* line 4, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_animations.scss */
+  100% {
+    left: -3000px;
+  }
+}
+
+@-ms-keyframes moveRight {
+  /* line 4, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_animations.scss */
+  100% {
+    left: -3000px;
+  }
+}
+
+@keyframes moveRight {
+  /* line 4, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_animations.scss */
+  100% {
+    left: -3000px;
+  }
+}
+
+@-webkit-keyframes moveLeft {
+  /* line 10, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_animations.scss */
+  100% {
+    left: 0px;
+  }
+}
+
+@-moz-keyframes moveLeft {
+  /* line 10, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_animations.scss */
+  100% {
+    left: 0px;
+  }
+}
+
+@-ms-keyframes moveLeft {
+  /* line 10, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_animations.scss */
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes moveLeft {
+  /* line 10, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_animations.scss */
+  100% {
+    left: 0px;
+  }
+}
+
+@-webkit-keyframes moveUp {
+  /* line 17, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_animations.scss */
+  100% {
+    top: 0px;
+  }
+}
+
+@-moz-keyframes moveUp {
+  /* line 17, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_animations.scss */
+  100% {
+    top: 0px;
+  }
+}
+
+@-ms-keyframes moveUp {
+  /* line 17, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_animations.scss */
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes moveUp {
+  /* line 17, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_animations.scss */
+  100% {
+    top: 0px;
+  }
+}
+
+@-webkit-keyframes moveDown {
+  /* line 23, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_animations.scss */
+  100% {
+    top: -700px;
+  }
+}
+
+@-moz-keyframes moveDown {
+  /* line 23, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_animations.scss */
+  100% {
+    top: -700px;
+  }
+}
+
+@-ms-keyframes moveDown {
+  /* line 23, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_animations.scss */
+  100% {
+    top: -700px;
+  }
+}
+
+@keyframes moveDown {
+  /* line 23, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_animations.scss */
+  100% {
+    top: -700px;
+  }
+}
+
+/* line 29, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_animations.scss */
+.zoomable {
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+/* line 35, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_animations.scss */
+.paused {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+/* line 8 */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 13 */
+*:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 20 */
+html {
+  font-size: 62.5%;
+}
+
+/* line 24 */
+body {
+  font-size: 1.4rem;
+  line-height: 1.42857;
+  background: #efefef;
+}
+
+/* line 30 */
+a {
+  color: black;
+  text-decoration: none;
+}
+/* line 35 */
+a:hover, a:focus, a:active {
+  text-decoration: underline;
+}
+
+/* line 40 */
+q {
+  font-style: italic;
+}
+
+/* line 44 */
+h1, h2, h3 {
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+/* line 50 */
+h1 {
+  font-size: 3rem;
+}
+
+/* line 51 */
+h2 {
+  font-size: 2rem;
+}
+
+/* line 52 */
+h3 {
+  font-size: 2rem;
+}
+
+/* line 54 */
+p {
+  margin: 0 0 1rem;
+}
+
+/* line 59 */
+figure img {
+  max-width: 100%;
+}
+/* line 62 */
+figure figcaption {
+  font-style: italic;
+  font-size: 0.85em;
+}
+
+/* line 68 */
+img.img-rounded {
+  border-radius: 10px;
+}
+
+/* line 73 */
+dl {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+/* line 78 */
+dt,
+dd {
+  line-height: 1.42857;
+}
+
+/* line 81 */
+dt {
+  font-weight: bold;
+}
+
+/* line 84 */
+dd {
+  margin-left: 0;
+}
+
+/* line 88 */
+.more:after {
+  content: "...";
+}
+
+/* line 93 */
+header#header-website {
+  text-align: center;
+}
+/* line 95 */
+header#header-website h1 {
+  font-size: 2em;
+}
+
+/* line 100 */
+footer#footer-website {
+  font-size: 0.8em;
+  color: #8c8c8c;
+}
+
+/* line 105 */
+nav#nav-top {
+  margin: 15px auto;
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+/* line 112 */
+nav#nav-top > a {
+  display: table-cell;
+  border: 2px solid #dfdfdf;
+  background: #ffc45e;
+  vertical-align: middle;
+  width: 30%;
+  padding: 5px;
+  font-weight: bold;
+}
+/* line 122 */
+nav#nav-top > a:hover, nav#nav-top > a.active {
+  text-decoration: none;
+  background: #efefef;
+}
+@media (min-width: 992px) {
+  /* line 105 */
+  nav#nav-top {
+    width: auto;
+    border-collapse: separate;
+    border-spacing: 5px;
+  }
+}
+
+/* line 136 */
+nav#nav-sidebar header {
+  padding: 5px;
+  background: #efefef;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+}
+/* line 144 */
+nav#nav-sidebar ul > li {
+  text-align: center;
+}
+@media (min-width: 992px) {
+  /* line 144 */
+  nav#nav-sidebar ul > li {
+    text-align: left;
+  }
+}
+/* line 150 */
+nav#nav-sidebar ul > li a {
+  padding: 5px 0;
+  display: block;
+  border-bottom: 2px solid #efefef;
+}
+/* line 155 */
+nav#nav-sidebar ul > li a:hover {
+  background: #efefef;
+  text-decoration: none;
+}
+
+/* line 164 */
+nav#nav-footer a {
+  color: #8c8c8c;
+}
+/* line 3, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_mixins.scss */
+nav#nav-footer ul:before, nav#nav-footer ul:after {
+  content: " ";
+  display: table;
+}
+/* line 7, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_mixins.scss */
+nav#nav-footer ul:after {
+  clear: both;
+}
+/* line 170 */
+nav#nav-footer ul li {
+  float: left;
+}
+/* line 172 */
+nav#nav-footer ul li:after {
+  content: "|";
+  margin: 0px 5px;
+}
+/* line 176 */
+nav#nav-footer ul li:last-child:after {
+  content: "";
+}
+
+/* line 184 */
+article > header {
+  padding-bottom: 0rem;
+  margin: 0 0 2rem 0;
+  border-bottom: 1px solid black;
+}
+
+/* line 190 */
+aside > header > h1 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+/* line 195 */
+aside > footer {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Styling Reviewers in Sidebar */
+/* line 202 */
+aside ul.reviewers li.reviewer {
+  margin-bottom: 15px;
+}
+/* line 3, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_mixins.scss */
+aside ul.reviewers li.reviewer:before, aside ul.reviewers li.reviewer:after {
+  content: " ";
+  display: table;
+}
+/* line 7, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_mixins.scss */
+aside ul.reviewers li.reviewer:after {
+  clear: both;
+}
+/* line 207 */
+aside ul.reviewers .name {
+  margin-left: 75px;
+  font-weight: bold;
+}
+/* line 211 */
+aside ul.reviewers .position {
+  margin-left: 75px;
+  font-size: 0.8em;
+}
+/* line 216 */
+aside ul.reviewers img.avatar {
+  float: left;
+  max-width: 70px;
+}
+
+/* line 222 */
+aside#sidebar-contest figure {
+  margin: 0;
+}
+
+/* line 226 */
+aside#sidebar-social {
+  background: #3b73db;
+}
+/* line 228 */
+aside#sidebar-social dl.social-networks {
+  text-align: center;
+  margin: 0;
+}
+/* line 231 */
+aside#sidebar-social dl.social-networks dt {
+  display: none;
+}
+/* line 234 */
+aside#sidebar-social dl.social-networks dd {
+  display: inline-block;
+  margin: 0px 15px;
+}
+/* line 238 */
+aside#sidebar-social dl.social-networks dd img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+/* line 246 */
+aside#sidebar-reviews li.review {
+  text-align: center;
+  margin: 15px 0;
+}
+/* line 249 */
+aside#sidebar-reviews li.review:last-child {
+  margin: 0;
+}
+/* line 254 */
+aside#sidebar-reviews figure {
+  margin: 0;
+}
+/* line 256 */
+aside#sidebar-reviews figure img {
+  max-width: 100%;
+}
+/* line 257 */
+aside#sidebar-reviews figure figcaption {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* line 265 */
+article.teaser figure.splash {
+  margin: 0 15px 15px 0;
+}
+/* line 268 */
+article.teaser figure.splash img {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  /* line 265 */
+  article.teaser figure.splash {
+    float: left;
+  }
+  /* line 273 */
+  article.teaser figure.splash img {
+    max-width: 265px;
+  }
+}
+/* line 279 */
+article.teaser footer {
+  clear: both;
+  text-align: right;
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+/* line 287 */
+article ul.reviewers {
+  margin: -15px;
+}
+/* line 3, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_mixins.scss */
+article ul.reviewers:before, article ul.reviewers:after {
+  content: " ";
+  display: table;
+}
+/* line 7, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_mixins.scss */
+article ul.reviewers:after {
+  clear: both;
+}
+/* line 291 */
+article ul.reviewers li.reviewer {
+  padding: 0 15px;
+  margin: 15px 0;
+}
+/* line 3, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_mixins.scss */
+article ul.reviewers li.reviewer:before, article ul.reviewers li.reviewer:after {
+  content: " ";
+  display: table;
+}
+/* line 7, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_mixins.scss */
+article ul.reviewers li.reviewer:after {
+  clear: both;
+}
+@media (min-width: 992px) {
+  /* line 291 */
+  article ul.reviewers li.reviewer {
+    clear: none;
+    float: left;
+    width: 50%;
+  }
+  /* line 302 */
+  article ul.reviewers li.reviewer:nth-child(odd) {
+    clear: both;
+  }
+}
+/* line 308 */
+article ul.reviewers .name {
+  margin-left: 105px;
+  font-weight: bold;
+}
+/* line 312 */
+article ul.reviewers .position {
+  margin-left: 105px;
+  font-size: 0.8em;
+}
+/* line 317 */
+article ul.reviewers q {
+  display: block;
+  margin: 15px 0 0 105px;
+  font-size: 0.8em;
+}
+/* line 323 */
+article ul.reviewers img.avatar {
+  float: left;
+  max-width: 100px;
+}
+
+/* line 330 */
+article.review footer {
+  margin-top: 15px;
+}
+/* line 3, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_mixins.scss */
+article.review footer:before, article.review footer:after {
+  content: " ";
+  display: table;
+}
+/* line 7, /Users/simon/Dropbox/University/Web Engineering/web_ex2/src/stylesheets/_mixins.scss */
+article.review footer:after {
+  clear: both;
+}
+/* line 334 */
+article.review figure.author {
+  margin: 0;
+  float: right;
+  text-align: right;
+}
+/* line 337 */
+article.review figure.author img {
+  max-width: 70px;
+}
+/* line 339 */
+article.review figure.author figcaption {
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* line 346 */
+.panorama {
+  height: 488px;
+  margin: 0;
+}
+/* line 350 */
+.panorama nav {
+  border-radius: 10px;
+}
+/* line 353 */
+.panorama nav .panorama-indicator {
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+/* line 360 */
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* line 366 */
+h1 {
+  font-size: 20px;
+}

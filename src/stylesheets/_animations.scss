@@ -1,0 +1,37 @@
+@import "mixins";
+
+@include keyframes(moveRight) {
+  100% {
+    left: -3000px;
+  }
+}
+
+@include keyframes(moveLeft) {
+  100% {
+    left: 0px;
+  }
+}
+
+
+@include keyframes(moveUp) {
+  100% {
+    top: 0px;
+  }
+}
+
+@include keyframes(moveDown) {
+  100% {
+    top: -700px;
+  }
+}
+
+
+.zoomable {
+  //@include animation-duration(20s);
+  @include animation-timing-function(linear);
+  @include animation-fill-mode(forwards);
+}
+
+.paused {
+  @include animation-play-state(paused);
+}

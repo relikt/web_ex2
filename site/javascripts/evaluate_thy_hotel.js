@@ -1,0 +1,3 @@
+$(function() {
+    $("#weekly-panorama").panorama();
+});

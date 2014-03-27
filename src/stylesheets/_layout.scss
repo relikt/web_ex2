@@ -1,0 +1,109 @@
+.clearfix {
+  @include clearfix();
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+
+  @include clearfix();
+}
+
+#header-website {
+  margin: 0px $grid-gutter-width/2;
+}
+
+#footer-website {
+  margin: $grid-gutter-width/2;
+}
+
+#sidebar-left,
+#sidebar-right,
+#main-website {
+  float: left;
+
+  // Prevent columns from collapsing when empty
+  min-height: 1px;
+  // Inner gutter via padding
+  padding-left: ($grid-gutter-width / 2);
+  padding-right: ($grid-gutter-width / 2);
+}
+
+#sidebar-left {
+  width: 100%;
+  @media (min-width: $screen-md-min) {
+    width: 20%;
+  }
+}
+
+#sidebar-right {
+  width: 100%;
+  @media (min-width: $screen-md-min) {
+    width: 25%;
+  }
+}
+
+#main-website {
+  width: 100%;
+
+  @media (min-width: $screen-md-min) {
+    width: 55%;
+  }
+
+  margin-bottom: $grid-gutter-width/2;
+}
+
+#footer-website {
+  @media (min-width: $screen-md-min) {
+    padding-left: 20%;
+  }
+}
+
+#main-website > .inner {
+  overflow: hidden;
+  padding: 0px $grid-gutter-width/2;
+  border-radius: 10px;
+  background-color: $element-bg;
+}
+
+#main-website > .inner > article,
+#main-website > .inner > a.previous {
+  display: block;
+  padding: $grid-gutter-width/2;
+  margin: $grid-gutter-width/2 0px;
+  border-radius: 10px;
+  background-color: $website-bg;
+}
+
+#main-website > .inner > a.previous {
+  font-weight: bold;
+  text-align: center;
+  &:hover {
+    text-decoration: none;
+    background: darken($website-bg, 5%);
+  }
+}
+
+#sidebar-right,
+#sidebar-left {
+  overflow: hidden;
+  margin-top: -$grid-gutter-width/2;
+}
+
+#sidebar-right > aside,
+#sidebar-left > nav {
+  padding: $grid-gutter-width/2;
+  margin: $grid-gutter-width/2 0px;
+  border-radius: 10px;
+  background-color: $element-bg;
+}
